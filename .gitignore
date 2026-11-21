@@ -221,3 +221,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# R y RStudio
+.Rhistory
+.RData
+.Rproj.user/
