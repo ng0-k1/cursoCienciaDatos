@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curso Ciencia de Datos</title>
+  <meta name="description" content="Informes de las actividades del curso de Ciencia de Datos, UPTC.">
+  <style>
+    :root {
+      --fondo: #f6f6f4;
+      --superficie: #ffffff;
+      --borde: #e2e1dc;
+      --texto: #1b1b1a;
+      --texto-sec: #55544f;
+      --acento: #2a78d6;
+      --acento-texto: #ffffff;
+      --acento-suave: #e8f1fc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fondo: #141413;
+        --superficie: #1f1f1d;
+        --borde: #34332f;
+        --texto: #f0efec;
+        --texto-sec: #b9b8b0;
+        --acento: #4b93ea;
+        --acento-texto: #0d1420;
+        --acento-suave: #1d2a3b;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 56px 16px 40px;
+    }
+    header { margin-bottom: 36px; }
+    .institucion {
+      margin: 0 0 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--acento);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.15;
+    }
+    .intro {
+      margin: 0;
+      max-width: 640px;
+      color: var(--texto-sec);
+    }
+    .actividades {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      background: var(--superficie);
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .etiqueta {
+      align-self: flex-start;
+      margin: 0 0 14px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--acento-suave);
+      color: var(--acento);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+    article p { margin: 0 0 12px; color: var(--texto-sec); }
+    dl {
+      margin: 4px 0 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4px 12px;
+      font-size: 0.9rem;
+    }
+    dt { font-weight: 600; }
+    dd { margin: 0; color: var(--texto-sec); }
+    .acciones {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .boton {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--acento);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .boton.principal { background: var(--acento); color: var(--acento-texto); }
+    .boton.secundario { background: transparent; color: var(--acento); }
+    .boton:hover { filter: brightness(1.08); }
+    .boton:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--borde);
+      font-size: 0.9rem;
+      color: var(--texto-sec);
+    }
+    footer a { color: var(--acento); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="institucion">Universidad Pedagógica y Tecnológica de Colombia</p>
+      <h1>Curso de Ciencia de Datos</h1>
+      <p class="intro">Informes de las actividades del curso. Cada informe es la exportación en HTML del notebook correspondiente, con el código, las tablas, los gráficos y el análisis.</p>
+    </header>
+
+    <section class="actividades" aria-label="Actividades">
+      <article>
+        <span class="etiqueta">Actividad I</span>
+        <h2>Análisis exploratorio de datos</h2>
+        <p>Matrícula escolar por sede educativa en Colombia, 2024: limpieza de datos perdidos y duplicados, medidas descriptivas, gráficos y Top 10 de municipios y departamentos.</p>
+        <dl>
+          <dt>Datos</dt><dd>DANE, Educación Formal (EDUC) 2024</dd>
+          <dt>Lenguaje</dt><dd>R (notebook de Jupyter)</dd>
+        </dl>
+        <div class="acciones">
+          <a class="boton principal" href="Actividad1/Tarea_1_EDA_Educacion_Formal_DANE.html">Ver informe</a>
+          <a class="boton secundario" href="https://github.com/ng0-k1/cursoCienciaDatos/blob/main/Actividad1/Tarea_1_EDA_Educacion_Formal_DANE.ipynb">Ver notebook</a>
+        </div>
+      </article>
+
+      <article>
+        <span class="etiqueta">Actividad II</span>
+        <h2>Preparación de datos para predecir el consumo energético</h2>
+        <p>Consumo energético de la sede Duitama de la UPTC: exploración, limpieza, análisis exploratorio y construcción del conjunto final para modelos de aprendizaje automático.</p>
+        <dl>
+          <dt>Datos</dt><dd>Lecturas horarias de consumo de las sedes UPTC, 2018 a 2025</dd>
+          <dt>Lenguaje</dt><dd>Python (notebook de Jupyter)</dd>
+        </dl>
+        <div class="acciones">
+          <a class="boton principal" href="Actividad2/Taller_2_Consumo_Energetico_UPTC.html">Ver informe</a>
+          <a class="boton secundario" href="https://github.com/ng0-k1/cursoCienciaDatos/blob/main/Actividad2/Taller_2_Consumo_Energetico_UPTC.ipynb">Ver notebook</a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      Repositorio del proyecto: <a href="https://github.com/ng0-k1/cursoCienciaDatos">github.com/ng0-k1/cursoCienciaDatos</a>
+    </footer>
+  </main>
+</body>
+</html>
